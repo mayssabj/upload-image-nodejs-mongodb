@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Upload d'image</title>
+</head>
+
+<body>
+    <h1>Upload d'image</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="image">Choisir une image:</label>
+        <input type="file" id="image" name="image" accept="image/*"><br><br>
+        <input type="submit" value="Uploader">
+    </form>
+    <form action="/delete/{{image._id}}" method="post">
+        <button type="submit">Supprimer</button>
+    </form>
+</body>
+<script src="index.js"></script>
+
+</html>
